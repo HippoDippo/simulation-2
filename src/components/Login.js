@@ -23,8 +23,8 @@ export default function Login(props) {
       <h2>Password:</h2>
         <input></input>
       <div>
-        <Button styles={button1}>Click</Button>
-        <Button styles={button2}>Click Me</Button>
+        <Button styles={button1}>Login</Button>
+        <Button styles={button2}>Register</Button>
       </div>
     </div>
   )
