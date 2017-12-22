@@ -7,26 +7,28 @@ export default function Login(props) {
   let button1 = { backgroundColor: "#8AEA92",  // Styles passed in through props.
                   color: "black",              // ID: 36E
                   padding: "11px 37px" };
-  
-  let button2 = { backgroundColor: "#3B5249",  // Styles passed in through props.
-                  color: "white",              // ID: 36E
-                  padding: "11px 27px"};
+                                               // This is what the cool kids do.
+  let button2 = { backgroundColor: "#3B5249",
+                  color: "white",              // Styles passed in through props.
+                  padding: "11px 27px" };      // ID: 36E
   
   // ID: 36H 
-  // Button is nested within Login.
+  // Buttons are nested within Login.
+
+  // Object destructoring
+  let { handleUsername, handleUserPassword, loginUser, registerUser } = props;
 
   return (
     <div className="login">
       <img src={authLogo} />
       <h2>Username:</h2>
-        <input></input>
+        <input onChange={(e) => handleUsername(e)}></input>
       <h2>Password:</h2>
-        <input></input>
+        <input onChange={(e) => handleUserPassword(e)}></input>
       <div>
-        <Button styles={button1}>Login</Button>
-        <Button styles={button2}>Register</Button>
+        <Button onClick={() => loginUser() } styles={button1}>Login</Button>
+        <Button onClick={() => registerUser() } styles={button2}>Register</Button>
       </div>
     </div>
   )
 }
-
