@@ -5,12 +5,16 @@ import Button from './Button';
 export default function Login(props) {
   
   let button1 = { backgroundColor: "#8AEA92",  // Styles passed in through props.
-                  color: "black",              // 36E
+                  color: "black",              // ID: 36E
                   padding: "11px 37px" };
   
   let button2 = { backgroundColor: "#3B5249",  // Styles passed in through props.
-                  color: "white",              // 36E
+                  color: "white",              // ID: 36E
                   padding: "11px 27px"};
+  
+  // ID: 36H 
+  // Button is nested within Login.
+
   return (
     <div className="login">
       <img src={authLogo} />
@@ -25,3 +29,4 @@ export default function Login(props) {
     </div>
   )
 }
+
