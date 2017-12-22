@@ -42,3 +42,7 @@
 .login input {
   font-size: 23px;
 }
+
+.login h2 {
+  margin-top: 23px;
+}
